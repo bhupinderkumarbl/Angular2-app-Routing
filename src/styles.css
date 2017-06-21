@@ -44,7 +44,7 @@ body {
 }
 .box {
   height: 50vh;
-  width: 80rem;
+  width: 50rem;
   background: rgba(0, 124, 255, 0.5);
   display: flex;
   align-items: center;
@@ -54,8 +54,11 @@ body {
   font-weight: 800;
   margin: 50px auto;
   position: absolute;
-  top: 29%;
-  left: 16%;
+  top: 50%;
+  left: 50%;
+  margin-left: -25rem;
+  margin-top: -25vh;
+
 }
 
 .active {
