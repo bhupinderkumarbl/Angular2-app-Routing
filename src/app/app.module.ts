@@ -1,11 +1,32 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule}      from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule, Routes} from '@angular/router';
+import {AppComponent}  from './app.component';
+import {aboutComponent} from './about/first.component';
+import {workComponent} from './works/first.component';
+import {portfolioComponent} from './portfolio/first.component';
+import {contactComponent} from './contact/first.component';
+import {homeComponent} from './homepage/first.component';
 
-import { AppComponent }  from './app.component';
+const routes: Routes = [
+
+
+  {path: 'home', component: homeComponent},
+  {path: 'about', component: aboutComponent},
+  {path: 'works', component: workComponent},
+  {path: 'portfolio', component: portfolioComponent},
+  {path: 'contact', component: contactComponent}
+]
 
 @NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+
+
+  ],
+  declarations: [AppComponent, aboutComponent, workComponent, portfolioComponent, contactComponent, homeComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
