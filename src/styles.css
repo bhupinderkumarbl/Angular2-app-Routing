@@ -24,6 +24,8 @@ body {
   padding: 10px 30px;
   text-transform: capitalize;
   cursor: pointer;
+  border-radius: 3px;
+  margin: 0 5px;
 }
 
 .box span {
