@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-  background: #ededed;
+  background: #fff;
   height: 100px;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ body {
 .box {
   height: 50vh;
   width: 80rem;
-  background: red;
+  background: rgba(0, 124, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,9 +53,298 @@ body {
   color: #fff;
   font-weight: 800;
   margin: 50px auto;
+  position: absolute;
+  top: 29%;
+  left: 16%;
 }
 
 .active {
   background: red;
   color: #fff
 }
+/*******************************  Background style  ***************************/
+body {
+  background-color: #000;
+  background-image: radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 10px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 10px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 10px);
+  background-size: 550px 550px,430px 430px,230px 230px;
+  background-position: 500px 2000px,400px 600px,400px 200px;
+}
+
+#solar-system {
+  position: relative;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  padding: 50px;
+}
+
+#neptune-circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  animation: rotation 70s linear infinite;
+}
+
+#neptune-circle:after {
+  position: absolute;
+  width: 10px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #00F;
+  border-color: #00009B;
+  border-style: solid;
+  border-width: 4px 1px 1px 1px;
+  content: '';
+  left: 300px;
+  top: -5px;
+}
+
+#uranus-circle {
+  position: absolute;
+  width: 530px;
+  height: 530px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 85px;
+  top: 85px;
+  animation: rotation 60s linear infinite;
+}
+
+#uranus-circle:after {
+  position: absolute;
+  width: 12px;
+  height: 9px;
+  border-radius: 100%;
+  border-color: #005353;
+  border-style: solid;
+  border-width: 4px 1px 1px 1px;
+  background-color: #00B9B9;
+  content: '';
+  left: 265px;
+  top: -7px;
+}
+
+#saturn-circle {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 120px;
+  top: 120px;
+  animation: rotation 50s linear infinite;
+}
+
+#saturn-circle:before {
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: #C0C0C0;
+  border-color: #838383;
+  border-style: solid;
+  border-width: 5px 1px 1px 1px;
+  content: '';
+  left: 230px;
+  top: -6px;
+}
+
+#saturn-circle:after {
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: transparent;
+  border-color: #838383;
+  border-style: solid;
+  border-width: 1px 1px 3px 1px;
+  content: '';
+  left: 224px;
+  top: -2px;
+}
+
+#jupiter-circle {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 170px;
+  top: 170px;
+  animation: rotation 40s linear infinite;
+}
+
+#jupiter-circle:after {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #F60;
+  border-color: #630;
+  border-style: solid;
+  border-width: 6px 1px 1px 1px;
+  content: '';
+  left: 170px;
+  top: -10px;
+}
+
+#mars-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 250px;
+  top: 250px;
+  animation: rotation 30s linear infinite;
+}
+
+#mars-circle:after {
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #B00000;
+  border-color: #600;
+  border-style: solid;
+  border-width: 3px 1px 1px 1px;
+  content: '';
+  left: 100px;
+  top: -5px;
+}
+
+#earth-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 275px;
+  top: 275px;
+  animation: rotation 20s linear infinite;
+}
+
+#earth-circle:before {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #CCC;
+  content: '';
+  left: 66px;
+  top: -2px;
+  transform-origin: 15px;
+  animation: rotation 2s linear infinite;
+}
+
+#earth-circle:after {
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #0058B0;
+  border-color: #00366C;
+  border-style: solid;
+  border-width: 3px 1px 1px 1px;
+  content: '';
+  left: 75px;
+  top: -5px;
+}
+
+#venus-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 300px;
+  top: 300px;
+  animation: rotation 10s linear infinite;
+}
+
+#venus-circle:after {
+  position: absolute;
+  width: 9px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #FFD3A8;
+  border-color: #FFA579;
+  border-style: solid;
+  border-width: 4px 1px 1px 1px;
+  content: '';
+  left: 50px;
+  top: -6px;
+}
+
+#mercury-circle {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 315px;
+  top: 315px;
+  animation: rotation 5s linear infinite;
+}
+
+#mercury-circle:after {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #713800;
+  border-color: #623100;
+  border-style: solid;
+  border-width: 2px 1px 1px 1px;
+  content: '';
+  left: 35px;
+  top: -3px;
+}
+
+#sun {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #F90;
+  border-radius: 100%;
+  left: 330px;
+  top: 330px;
+  background: radial-gradient(circle, #ff6600, #ffcc00);
+  box-shadow: 0px 0px 50px #F90;
+  animation: sun-shadow 2s ease infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes sun-shadow {
+  0% {
+    box-shadow: 0px 0px 20px #F90;
+  }
+  50% {
+    box-shadow: 0px 0px 50px #F90;
+  }
+  100% {
+    box-shadow: 0px 0px 20px #F90;
+  }
+}
+
+
+
+
