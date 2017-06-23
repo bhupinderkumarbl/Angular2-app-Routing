@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {MdButtonModule} from '@angular/material';
 
 @Component({
   selector: 'my-app',
