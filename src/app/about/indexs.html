@@ -1,2 +1,56 @@
-<div class="box">This is <span>about </span>page</div>
+<style>
+  .menu_button{
+    border:0px;
+    padding:10px 30px;
+    display: inline-block;
+    background: #ffffff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 50px  0 0;
+    cursor: pointer;
+  }
+  .MyClass{ visibility: visible!important;}
 
+  button:hover{
+    background: #ededed;
+  }
+  ul{ width:100%}
+  #footer{
+    position: fixed;
+    background: rgb(0, 33, 76);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    list-style: none;
+    text-align: center;
+    justify-content: inherit;
+    align-content: left;
+    visibility:hidden;
+    transition:visibility 1s linear;
+
+  }
+  li{ cursor: pointer; display: block; list-style: none ; text-transform: capitalize; width: 100%; padding:30px 0}
+  li:hover{background: #fff; color: #000 }
+  .close_menu{font-size: 18px;
+    padding: 20px 50px;
+    border: 0;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer; }
+
+</style>
+
+<div class="box">This is <span>about </span>page {{ value}}
+<button class="menu_button" (click) = "clicked()">Menu</button>
+  <div id="footer" class="footer">
+    <button class="close_menu" (click) = "closemenu()">Close Menu</button>
+    <ul>
+      <li routerLink="/home" routerLinkActive="active">Home</li>
+      <li routerLink="/about" routerLinkActive="active">about</li>
+      <li routerLink="/works" routerLinkActive="active">works</li>
+      <li routerLink="/portfolio" routerLinkActive="active">Portfolio</li>
+      <li routerLink="/contact" routerLinkActive="active">contact</li>
+    </ul>
+  </div>
+</div>

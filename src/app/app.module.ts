@@ -7,9 +7,10 @@ import {workComponent} from './works/first.component';
 import {portfolioComponent} from './portfolio/first.component';
 import {contactComponent} from './contact/first.component';
 import {homeComponent} from './homepage/first.component';
+import {appService} from './app.service';
+
 
 const routes: Routes = [
-
 
   {path: 'home', component: homeComponent},
   {path: 'about', component: aboutComponent},
@@ -21,10 +22,9 @@ const routes: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-
-
+    RouterModule.forRoot(routes)
   ],
+  providers: [appService],
   declarations: [AppComponent, aboutComponent, workComponent, portfolioComponent, contactComponent, homeComponent],
   bootstrap: [AppComponent]
 })
